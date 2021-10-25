@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
 
         //Create buttons
-        Buttons button = new Buttons();
-        JButton[][] buttonArray = button.buttonArray();
+        Buttons afoa = new Buttons();
+        JButton[][] buttonArray = afoa.buttonArray();
 
 
         //Create panel, add buttons

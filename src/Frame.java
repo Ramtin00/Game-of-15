@@ -7,7 +7,6 @@ public class Frame extends JFrame {
         setTitle("Game of 15");
         add(panel);
         setVisible(true);
-
         pack();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
