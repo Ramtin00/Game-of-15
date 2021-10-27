@@ -9,8 +9,6 @@ public class GameLogic {
     static MyButton clickedButton;
 
     public static boolean checkSmiley(MyButton clickedButton, MyButton smiley) {
-        //System.out.println("X: " + x + "\nY: " + y);
-        //System.out.println("Y: " + smiley.getYY() + "\nX: " + smiley.getXX());
         clickY = clickedButton.getYY();
         clickX = clickedButton.getXX();
         smileyY = smiley.getYY();
