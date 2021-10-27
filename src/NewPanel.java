@@ -3,14 +3,11 @@ import java.awt.*;
 
 public class NewPanel extends JPanel {
 
+    public static MyButton[][] buttonArray;
+    public static JPanel centerPanel = new JPanel();
     JPanel mainPanel = new JPanel();
     JPanel northPanel = new JPanel();
-
-   public static JPanel centerPanel = new JPanel();
-
     JButton newGame = new JButton("New Game");
-
-    public static MyButton[][] buttonArray;
 
     public JPanel createPanel(MyButton[][] buttonArray) {
         NewPanel.buttonArray = buttonArray;
@@ -37,7 +34,8 @@ public class NewPanel extends JPanel {
         mainPanel.repaint();
         return mainPanel;
     }
-    public static void updatePanel (){
+
+    public static void updatePanel() {
 
         centerPanel.removeAll();
         for (int i = 0; i < 4; i++) {
@@ -53,5 +51,9 @@ public class NewPanel extends JPanel {
         centerPanel.repaint();
     }
 
+    /*public void calcWin(){
+    boolean win;
+    for (int i = 0; i < 4; i++) {
+        if (buttonArray[][] = )*/
 }
 
