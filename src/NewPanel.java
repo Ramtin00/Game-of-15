@@ -5,6 +5,7 @@ public class NewPanel extends JPanel {
 
     JPanel mainPanel = new JPanel();
     JPanel northPanel = new JPanel();
+
    public static JPanel centerPanel = new JPanel();
 
     JButton newGame = new JButton("New Game");
@@ -17,8 +18,6 @@ public class NewPanel extends JPanel {
         northPanel.setBackground(Color.blue);
         northPanel.setPreferredSize(new Dimension(500, 100));
         northPanel.add(newGame);
-
-//        centerPanel.setBackground(Color.lightGray);
         centerPanel.setLayout(new GridLayout(4, 4));
 
         for (int i = 0; i < 4; i++) {
@@ -31,8 +30,7 @@ public class NewPanel extends JPanel {
 
         }
 
-
-        mainPanel.add(centerPanel, BorderLayout.CENTER);
+        mainPanel.add(centerPanel, BorderLayout.SOUTH);
         centerPanel.revalidate();
         centerPanel.repaint();
         mainPanel.revalidate();
@@ -56,3 +54,4 @@ public class NewPanel extends JPanel {
     }
 
 }
+
