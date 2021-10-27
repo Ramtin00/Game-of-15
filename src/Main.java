@@ -8,9 +8,12 @@ public class Main {
 
         //Create buttons
         Buttons afoa = new Buttons();
-        JButton[][] buttonArray = afoa.buttonArray();
-
-
+        MyButton[][] buttonArray = afoa.buttonArray();
+//        for (JButton[] jButtons : buttonArray) {
+//            for (JButton jButton : jButtons) {
+//                System.out.println(jButton.getText());
+//            }
+//        }
         //Create panel, add buttons
         NewPanel panel = new NewPanel();
         JPanel mainPanel = panel.createPanel(buttonArray);

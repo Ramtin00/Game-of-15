@@ -8,6 +8,7 @@ public class Frame extends JFrame {
         add(panel);
         setVisible(true);
         pack();
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
     }
