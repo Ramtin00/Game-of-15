@@ -31,23 +31,6 @@ public class NewPanel extends JPanel {
 
         }
 
-       /* centerPanel.add(buttonArray[0][0]);
-        centerPanel.add(buttonArray[0][1]);
-        centerPanel.add(buttonArray[0][2]);
-        centerPanel.add(buttonArray[0][3]);
-        centerPanel.add(buttonArray[1][0]);
-        centerPanel.add(buttonArray[1][1]);
-        centerPanel.add(buttonArray[1][2]);
-        centerPanel.add(buttonArray[1][3]);
-        centerPanel.add(buttonArray[2][0]);
-        centerPanel.add(buttonArray[2][1]);
-        centerPanel.add(buttonArray[2][2]);
-        centerPanel.add(buttonArray[2][3]);
-        centerPanel.add(buttonArray[3][0]);
-        centerPanel.add(buttonArray[3][1]);
-        centerPanel.add(buttonArray[3][2]);
-        centerPanel.add(buttonArray[3][3]);
-*/
 
         mainPanel.add(centerPanel, BorderLayout.CENTER);
         centerPanel.revalidate();
@@ -68,22 +51,6 @@ public class NewPanel extends JPanel {
             }
 
         }
-        /*centerPanel.add(buttonArray[0][0]);
-        centerPanel.add(buttonArray[0][1]);
-        centerPanel.add(buttonArray[0][2]);
-        centerPanel.add(buttonArray[0][3]);
-        centerPanel.add(buttonArray[1][0]);
-        centerPanel.add(buttonArray[1][1]);
-        centerPanel.add(buttonArray[1][2]);
-        centerPanel.add(buttonArray[1][3]);
-        centerPanel.add(buttonArray[2][0]);
-        centerPanel.add(buttonArray[2][1]);
-        centerPanel.add(buttonArray[2][2]);
-        centerPanel.add(buttonArray[2][3]);
-        centerPanel.add(buttonArray[3][0]);
-        centerPanel.add(buttonArray[3][1]);
-        centerPanel.add(buttonArray[3][2]);
-        centerPanel.add(buttonArray[3][3]);*/
         centerPanel.revalidate();
         centerPanel.repaint();
     }

@@ -11,46 +11,17 @@ public class Buttons implements ActionListener {
     MyButton[][] buttonArray = new MyButton[4][4];
 
     ArrayList<MyButton> buttonsList = new ArrayList<>();
+    private MyButton blank;
 
-    MyButton button1 = new MyButton("1");
-    MyButton button2 = new MyButton("2");
-    MyButton button3 = new MyButton("3");
-    MyButton button4 = new MyButton("4");
-    MyButton button5 = new MyButton("5");
-    MyButton button6 = new MyButton("6");
-    MyButton button7 = new MyButton("7");
-    MyButton button8 = new MyButton("8");
-    MyButton button9 = new MyButton("9");
-    MyButton button10 = new MyButton("10");
-    MyButton button11 = new MyButton("11");
-    MyButton button12 = new MyButton("12");
-    MyButton button13 = new MyButton("13");
-    MyButton button14 = new MyButton("14");
-    MyButton button15 = new MyButton("15");
-    MyButton blank = new MyButton(":)");
+        public MyButton[][] buttonArray() {
 
-    public MyButton[][] buttonArray() {
-
-
-        buttonsList.add(button1);
-        buttonsList.add(button2);
-        buttonsList.add(button3);
-        buttonsList.add(button4);
-        buttonsList.add(button5);
-        buttonsList.add(button6);
-        buttonsList.add(button7);
-        buttonsList.add(button8);
-        buttonsList.add(button9);
-        buttonsList.add(button10);
-        buttonsList.add(button11);
-        buttonsList.add(button12);
-        buttonsList.add(button13);
-        buttonsList.add(button14);
-        buttonsList.add(button15);
-
-
-        Collections.shuffle(buttonsList);
+        for (int i = 1; i < 16 ; i++) {
+            buttonsList.add(new MyButton(String.valueOf(i)));
+        }
+        blank = new MyButton(":)");
         buttonsList.add(blank);
+        Collections.shuffle(buttonsList);
+
 
         for (MyButton MyButton : buttonsList) {
             MyButton.addActionListener(this);
