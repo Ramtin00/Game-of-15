@@ -21,7 +21,17 @@ public class NewPanel extends JPanel {
 //        centerPanel.setBackground(Color.lightGray);
         centerPanel.setLayout(new GridLayout(4, 4));
 
-        centerPanel.add(buttonArray[0][0]);
+        for (int i = 0; i < 4; i++) {
+
+            centerPanel.add(buttonArray[i][0]);
+
+            for (int j = 0; j < 4; j++) {
+                centerPanel.add(buttonArray[i][j]);
+            }
+
+        }
+
+       /* centerPanel.add(buttonArray[0][0]);
         centerPanel.add(buttonArray[0][1]);
         centerPanel.add(buttonArray[0][2]);
         centerPanel.add(buttonArray[0][3]);
@@ -37,7 +47,7 @@ public class NewPanel extends JPanel {
         centerPanel.add(buttonArray[3][1]);
         centerPanel.add(buttonArray[3][2]);
         centerPanel.add(buttonArray[3][3]);
-
+*/
 
         mainPanel.add(centerPanel, BorderLayout.CENTER);
         centerPanel.revalidate();
@@ -49,7 +59,16 @@ public class NewPanel extends JPanel {
     public static void updatePanel (){
 
         centerPanel.removeAll();
-        centerPanel.add(buttonArray[0][0]);
+        for (int i = 0; i < 4; i++) {
+
+            centerPanel.add(buttonArray[i][0]);
+
+            for (int j = 0; j < 4; j++) {
+                centerPanel.add(buttonArray[i][j]);
+            }
+
+        }
+        /*centerPanel.add(buttonArray[0][0]);
         centerPanel.add(buttonArray[0][1]);
         centerPanel.add(buttonArray[0][2]);
         centerPanel.add(buttonArray[0][3]);
@@ -64,7 +83,7 @@ public class NewPanel extends JPanel {
         centerPanel.add(buttonArray[3][0]);
         centerPanel.add(buttonArray[3][1]);
         centerPanel.add(buttonArray[3][2]);
-        centerPanel.add(buttonArray[3][3]);
+        centerPanel.add(buttonArray[3][3]);*/
         centerPanel.revalidate();
         centerPanel.repaint();
     }

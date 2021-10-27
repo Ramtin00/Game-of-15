@@ -31,42 +31,27 @@ public class Buttons implements ActionListener {
 
     public MyButton[][] buttonArray() {
 
-        button1.setName("1");
+
         buttonsList.add(button1);
-        button1.setName("2");
         buttonsList.add(button2);
-        button1.setName("3");
         buttonsList.add(button3);
-        button1.setName("4");
         buttonsList.add(button4);
-        button1.setName("5");
         buttonsList.add(button5);
-        button1.setName("6");
         buttonsList.add(button6);
-        button1.setName("7");
         buttonsList.add(button7);
-        button1.setName("8");
         buttonsList.add(button8);
-        button1.setName("9");
         buttonsList.add(button9);
-        button1.setName("10");
         buttonsList.add(button10);
-        button1.setName("11");
         buttonsList.add(button11);
-        button1.setName("12");
         buttonsList.add(button12);
-        button1.setName("13");
         buttonsList.add(button13);
-        button1.setName("14");
         buttonsList.add(button14);
-        button1.setName("15");
         buttonsList.add(button15);
-//        button1.setName("blank");
-//        buttonsList.add(blank);
 
 
         Collections.shuffle(buttonsList);
         buttonsList.add(blank);
+
         for (MyButton MyButton : buttonsList) {
             MyButton.addActionListener(this);
         }
