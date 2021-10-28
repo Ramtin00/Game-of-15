@@ -21,7 +21,7 @@ public class GameLogic {
                 calcCord();
                 return true;
             }
-        } else if(clickX == smileyX) {
+        } else if (clickX == smileyX) {
             if (clickY == smileyY - 1 || clickY == smileyY + 1) {
                 calcCord();
                 return true;
@@ -29,7 +29,8 @@ public class GameLogic {
         }
         return false;
     }
-    private static void calcCord(){
+
+    private static void calcCord() {
 
         smiley.setYY(clickY);
         smiley.setXX(clickX);
@@ -39,5 +40,25 @@ public class GameLogic {
         NewPanel.buttonArray[clickY][clickX] = smiley;
         NewPanel.buttonArray[smileyY][smileyX] = clickedButton;
         NewPanel.updatePanel();
+    }
+
+    public boolean calcWin() {
+        Buttons button = new Buttons();
+
+        boolean win;
+        for (int i = 0; i < 4; i++) {
+            if (NewPanel.buttonArray[i][0] == NewPanel.centerPanel.getComponent(i)) ;
+            {
+                for (int j = 0; j < 4; j++) {
+                    if (NewPanel.buttonArray[i][j] == NewPanel.centerPanel.getComponent(i)) ;
+                    {
+                        System.out.println(NewPanel.buttonArray);
+                        return true;
+                    }
+                }
+
+            }
+        }
+        return false;
     }
 }

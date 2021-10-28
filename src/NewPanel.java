@@ -11,9 +11,8 @@ public class NewPanel extends JPanel {
 
     public JPanel createPanel(MyButton[][] buttonArray) {
         NewPanel.buttonArray = buttonArray;
-
+        mainPanel.setLayout(new BorderLayout());
         northPanel.setBackground(Color.blue);
-        northPanel.setPreferredSize(new Dimension(500, 100));
         northPanel.add(newGame);
         centerPanel.setLayout(new GridLayout(4, 4));
 
@@ -26,12 +25,8 @@ public class NewPanel extends JPanel {
             }
 
         }
-
+        mainPanel.add(northPanel, BorderLayout.NORTH);
         mainPanel.add(centerPanel, BorderLayout.SOUTH);
-        centerPanel.revalidate();
-        centerPanel.repaint();
-        mainPanel.revalidate();
-        mainPanel.repaint();
         return mainPanel;
     }
 
@@ -50,10 +45,4 @@ public class NewPanel extends JPanel {
         centerPanel.revalidate();
         centerPanel.repaint();
     }
-
-    /*public void calcWin(){
-    boolean win;
-    for (int i = 0; i < 4; i++) {
-        if (buttonArray[][] = )*/
 }
-
