@@ -14,7 +14,7 @@ public class NewPanel extends JPanel implements ActionListener {
     public JPanel createPanel(MyButton[][] buttonArray) {
         NewPanel.buttonArray = buttonArray;
         mainPanel.setLayout(new BorderLayout());
-        northPanel.setBackground(Color.blue);
+        northPanel.setBackground(Color.gray);
         northPanel.add(newGame);
         newGame.addActionListener(this);
         centerPanel.setLayout(new GridLayout(4, 4));
