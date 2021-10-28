@@ -55,7 +55,7 @@ public class GameLogic {
                     } count++;
                 }
             }
-        JOptionPane.showMessageDialog(null, "Grattis - du är ett ägg!");
+        JOptionPane.showMessageDialog(null, "Grattis - du klarade spelet!");
         return true;
     }
 }
