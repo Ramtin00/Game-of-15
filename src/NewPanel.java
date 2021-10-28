@@ -50,7 +50,7 @@ public class NewPanel extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        //test
         Buttons re = new Buttons();
         buttonArray = re.buttonArray();
         centerPanel.removeAll();
