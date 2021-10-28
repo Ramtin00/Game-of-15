@@ -13,8 +13,10 @@ public class GamePanel extends JPanel implements ActionListener {
     //Creation of gamepanels.
     public JPanel createPanel(MyButton[][] buttonArray) {
         GamePanel.buttonArray = buttonArray;
+        newGame.setFont(new Font("Arial", Font.BOLD, 14));
+        newGame.setToolTipText("Press this button to start a-new!");
         mainPanel.setLayout(new BorderLayout());
-        northPanel.setBackground(Color.blue);
+        northPanel.setBackground(Color.gray);
         northPanel.add(newGame);
         newGame.addActionListener(this);
         centerPanel.setLayout(new GridLayout(4, 4));
@@ -23,7 +25,6 @@ public class GamePanel extends JPanel implements ActionListener {
             for (int j = 0; j < 4; j++) {
                 centerPanel.add(buttonArray[i][j]);
             }
-
         }
         mainPanel.add(northPanel, BorderLayout.NORTH);
         mainPanel.add(centerPanel, BorderLayout.SOUTH);
