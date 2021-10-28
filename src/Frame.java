@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Frame extends JFrame {
-
+    //Create base frame
     public Frame(JPanel panel) {
         setTitle("Game of 15");
         add(panel);

@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.util.Arrays;
 
 public class GameLogic {
     static int clickY;
@@ -9,6 +8,7 @@ public class GameLogic {
     static MyButton smiley;
     static MyButton clickedButton;
 
+    //Method to check where blank/smiley is located in grid.
     public static boolean checkSmiley(MyButton clickedButton, MyButton smiley) {
         clickY = clickedButton.getYY();
         clickX = clickedButton.getXX();
@@ -19,19 +19,19 @@ public class GameLogic {
 
         if (clickY == smileyY) {
             if (clickX == smileyX + 1 || clickX == smileyX - 1) {
-                calcCord();
+                buttonSwitch();
                 return true;
             }
         } else if (clickX == smileyX) {
             if (clickY == smileyY - 1 || clickY == smileyY + 1) {
-                calcCord();
+                buttonSwitch();
                 return true;
             }
         }
         return false;
     }
-
-    private static void calcCord() {
+    //Method to switch blank with moved number.
+    private static void buttonSwitch() {
 
         smiley.setYY(clickY);
         smiley.setXX(clickX);
@@ -42,7 +42,7 @@ public class GameLogic {
         NewPanel.buttonArray[smileyY][smileyX] = clickedButton;
         NewPanel.updatePanel();
     }
-
+    //Method to calculate if winning formation or not.
     public boolean calcWin() {
     int count = 1;
         for (int i = 0; i < 4; i++) {

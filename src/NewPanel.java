@@ -4,13 +4,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class NewPanel extends JPanel implements ActionListener {
-
     public static MyButton[][] buttonArray;
     public static JPanel centerPanel = new JPanel();
     JPanel mainPanel = new JPanel();
     JPanel northPanel = new JPanel();
     JButton newGame = new JButton("New Game");
 
+    //Creation of gamepanels.
     public JPanel createPanel(MyButton[][] buttonArray) {
         NewPanel.buttonArray = buttonArray;
         mainPanel.setLayout(new BorderLayout());
@@ -32,7 +32,7 @@ public class NewPanel extends JPanel implements ActionListener {
         mainPanel.add(centerPanel, BorderLayout.SOUTH);
         return mainPanel;
     }
-
+    //Method which handles updates after button switch.
     public static void updatePanel() {
         GameLogic test = new GameLogic();
 
@@ -48,11 +48,12 @@ public class NewPanel extends JPanel implements ActionListener {
         test.calcWin();
     }
 
+    //NewGame-ButtonRefresh.
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        Buttons re = new Buttons();
-        buttonArray = re.buttonArray();
+        Buttons refresh = new Buttons();
+        buttonArray = refresh.buttonArray();
         centerPanel.removeAll();
         for (int i = 0; i < 4; i++) {
 

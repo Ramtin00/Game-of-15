@@ -12,7 +12,7 @@ public class Buttons implements ActionListener {
     ArrayList<MyButton> buttonsList = new ArrayList<>();
 
     private MyButton blank;
-
+        //Creation of a buttonarray.
         public MyButton[][] buttonArray() {
 
         for (int i = 1; i < 16 ; i++) {
@@ -43,7 +43,7 @@ public class Buttons implements ActionListener {
         return buttonArray;
     }
 
-
+    //Listener for number and "blank"-buttons.
     @Override
     public void actionPerformed(ActionEvent e) {
         MyButton b = (MyButton) e.getSource();

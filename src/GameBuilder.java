@@ -7,7 +7,7 @@ public class GameBuilder {
         Buttons buttons = new Buttons();
         MyButton[][] buttonArray = buttons.buttonArray();
 
-        //Create panel, add buttons.
+        //Create panel, add buttons
         NewPanel panel = new NewPanel();
         JPanel mainPanel = panel.createPanel(buttonArray);
 
