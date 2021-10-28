@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.util.Arrays;
 
 public class GameLogic {
     static int clickY;
@@ -43,22 +44,19 @@ public class GameLogic {
     }
 
     public boolean calcWin() {
-        Buttons button = new Buttons();
-
-        boolean win;
+    int count = 1;
         for (int i = 0; i < 4; i++) {
-            if (NewPanel.buttonArray[i][0] == NewPanel.centerPanel.getComponent(i)) ;
-            {
                 for (int j = 0; j < 4; j++) {
-                    if (NewPanel.buttonArray[i][j] == NewPanel.centerPanel.getComponent(i)) ;
-                    {
-                        System.out.println(NewPanel.buttonArray);
-                        return true;
+                    if (i == 3 && j == 3){
+                        break;
                     }
+                    if (!NewPanel.buttonArray[i][j].getText().equals(String.valueOf(count))) {
+                        return false;
+                    } count++;
                 }
-
             }
-        }
-        return false;
+        JOptionPane.showMessageDialog(null, "Grattis - du är ett ägg!");
+        return true;
     }
 }
+

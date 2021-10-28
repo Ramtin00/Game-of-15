@@ -8,15 +8,16 @@ import java.util.List;
 
 public class Buttons implements ActionListener {
 
-    MyButton[][] buttonArray = new MyButton[4][4];
-
+    private MyButton[][] buttonArray = new MyButton[4][4];
     ArrayList<MyButton> buttonsList = new ArrayList<>();
+
     private MyButton blank;
 
         public MyButton[][] buttonArray() {
 
         for (int i = 1; i < 16 ; i++) {
             buttonsList.add(new MyButton(String.valueOf(i)));
+            buttonsList.get(i-1).setName(String.valueOf(i));
         }
         blank = new MyButton(":)");
         buttonsList.add(blank);
