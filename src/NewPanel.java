@@ -13,6 +13,7 @@ public class NewPanel extends JPanel implements ActionListener {
 
     public JPanel createPanel(MyButton[][] buttonArray) {
         NewPanel.buttonArray = buttonArray;
+        newGame.setFont(new Font("Arial", Font.BOLD, 14));
         mainPanel.setLayout(new BorderLayout());
         northPanel.setBackground(Color.gray);
         northPanel.add(newGame);
