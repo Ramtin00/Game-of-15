@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class NewPanel extends JPanel implements ActionListener {
+public class GamePanel extends JPanel implements ActionListener {
     public static MyButton[][] buttonArray;
     public static JPanel centerPanel = new JPanel();
     JPanel mainPanel = new JPanel();
@@ -12,7 +12,7 @@ public class NewPanel extends JPanel implements ActionListener {
 
     //Creation of gamepanels.
     public JPanel createPanel(MyButton[][] buttonArray) {
-        NewPanel.buttonArray = buttonArray;
+        GamePanel.buttonArray = buttonArray;
         mainPanel.setLayout(new BorderLayout());
         northPanel.setBackground(Color.blue);
         northPanel.add(newGame);

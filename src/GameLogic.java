@@ -38,9 +38,9 @@ public class GameLogic {
 
         clickedButton.setYY(smileyY);
         clickedButton.setXX(smileyX);
-        NewPanel.buttonArray[clickY][clickX] = smiley;
-        NewPanel.buttonArray[smileyY][smileyX] = clickedButton;
-        NewPanel.updatePanel();
+        GamePanel.buttonArray[clickY][clickX] = smiley;
+        GamePanel.buttonArray[smileyY][smileyX] = clickedButton;
+        GamePanel.updatePanel();
     }
     //Method to calculate if winning formation or not.
     public boolean calcWin() {
@@ -50,7 +50,7 @@ public class GameLogic {
                     if (i == 3 && j == 3){
                         break;
                     }
-                    if (!NewPanel.buttonArray[i][j].getText().equals(String.valueOf(count))) {
+                    if (!GamePanel.buttonArray[i][j].getText().equals(String.valueOf(count))) {
                         return false;
                     } count++;
                 }
