@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
+//Class for creation of custom button with x and y coordinates.
 public class MyButton extends JButton {
     private int xx;
     private int yy;

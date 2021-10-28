@@ -1,10 +1,7 @@
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 
 public class Buttons implements ActionListener {
 
@@ -12,7 +9,7 @@ public class Buttons implements ActionListener {
     ArrayList<MyButton> buttonsList = new ArrayList<>();
 
     private MyButton blank;
-
+        //Creation of a button array.
         public MyButton[][] buttonArray() {
 
         for (int i = 1; i < 16 ; i++) {
@@ -21,7 +18,7 @@ public class Buttons implements ActionListener {
         }
         blank = new MyButton(":)");
         buttonsList.add(blank);
-        Collections.shuffle(buttonsList);
+        //Collections.shuffle(buttonsList);
 
 
         for (MyButton MyButton : buttonsList) {
@@ -43,13 +40,13 @@ public class Buttons implements ActionListener {
         return buttonArray;
     }
 
-
+    //Listener for number and "blank"-buttons.
     @Override
     public void actionPerformed(ActionEvent e) {
         MyButton b = (MyButton) e.getSource();
-        boolean canChange = GameLogic.checkSmiley(b, blank);
+        boolean canChange = GameLogic.checkMovable(b, blank);
         if (canChange){
-            buttonArray = NewPanel.buttonArray;
+            buttonArray = GamePanel.buttonArray;
         }
 
     }
