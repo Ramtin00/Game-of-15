@@ -9,7 +9,7 @@ public class GameLogic {
     static MyButton clickedButton;
 
     //Method to check where blank/smiley is located in grid.
-    public static boolean checkSmiley(MyButton clickedButton, MyButton smiley) {
+    public static boolean checkMovable(MyButton clickedButton, MyButton smiley) {
         clickY = clickedButton.getYY();
         clickX = clickedButton.getXX();
         smileyY = smiley.getYY();

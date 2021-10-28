@@ -3,6 +3,7 @@ import javax.swing.*;
 public class GameBuilder {
 
     void startGame() {
+
         //Create buttons
         Buttons buttons = new Buttons();
         MyButton[][] buttonArray = buttons.buttonArray();

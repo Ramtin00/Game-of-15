@@ -9,7 +9,7 @@ public class Buttons implements ActionListener {
     ArrayList<MyButton> buttonsList = new ArrayList<>();
 
     private MyButton blank;
-        //Creation of a buttonarray.
+        //Creation of a button array.
         public MyButton[][] buttonArray() {
 
         for (int i = 1; i < 16 ; i++) {
@@ -18,7 +18,7 @@ public class Buttons implements ActionListener {
         }
         blank = new MyButton(":)");
         buttonsList.add(blank);
-        Collections.shuffle(buttonsList);
+        //Collections.shuffle(buttonsList);
 
 
         for (MyButton MyButton : buttonsList) {
@@ -44,7 +44,7 @@ public class Buttons implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         MyButton b = (MyButton) e.getSource();
-        boolean canChange = GameLogic.checkSmiley(b, blank);
+        boolean canChange = GameLogic.checkMovable(b, blank);
         if (canChange){
             buttonArray = GamePanel.buttonArray;
         }

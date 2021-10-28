@@ -20,9 +20,6 @@ public class GamePanel extends JPanel implements ActionListener {
         centerPanel.setLayout(new GridLayout(4, 4));
 
         for (int i = 0; i < 4; i++) {
-
-            centerPanel.add(buttonArray[i][0]);
-
             for (int j = 0; j < 4; j++) {
                 centerPanel.add(buttonArray[i][j]);
             }
