@@ -6,16 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Create buttons
-        Buttons afoa = new Buttons();
-        MyButton[][] buttonArray = afoa.buttonArray();
-
-        //Create panel, add buttons
-        NewPanel panel = new NewPanel();
-        JPanel mainPanel = panel.createPanel(buttonArray);
-
-        //Create JFrame, add panel
-        Frame frame = new Frame(mainPanel);
-
+        GameBuilder start = new GameBuilder();
+        start.startGame();
     }
 }
