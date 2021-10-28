@@ -14,6 +14,7 @@ public class NewPanel extends JPanel implements ActionListener {
     public JPanel createPanel(MyButton[][] buttonArray) {
         NewPanel.buttonArray = buttonArray;
         newGame.setFont(new Font("Arial", Font.BOLD, 14));
+        newGame.setToolTipText("Press this button to start a-new!");
         mainPanel.setLayout(new BorderLayout());
         northPanel.setBackground(Color.gray);
         northPanel.add(newGame);
